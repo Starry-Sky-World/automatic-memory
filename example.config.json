@@ -1,0 +1,12 @@
+{
+  "keys": [
+    "replace-with-your-api-key"
+  ],
+  "accounts": [
+    {
+      "email": "user@example.com",
+      "password": "replace-with-account-password",
+      "token": ""
+    }
+  ]
+}

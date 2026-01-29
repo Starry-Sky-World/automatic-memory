@@ -1,0 +1,16 @@
+[project]
+name = "ds2api"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.118.0",
+    "gunicorn>=23.0.0",
+    "httpx[http2]>=0.27.0",
+    "jinja2>=3.1.6",
+    "nuitka>=2.8",
+    "transformers>=4.57.0",
+    "uvicorn>=0.37.0",
+    "wasmtime>=36.0.0",
+]
