@@ -1,0 +1,19 @@
+# Ignore VCS and local artifacts
+.git
+.gitignore
+
+# Build artifacts
+*.log
+*.tmp
+*.swp
+coverage.out
+
+# Frontend local artifacts
+web/node_modules
+web/dist
+
+# OS/editor artifacts
+.DS_Store
+Thumbs.db
+.vscode
+.idea

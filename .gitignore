@@ -1,3 +1,10 @@
 
 *.tar.gz
 *.zip
+go-ver/deepseek2api-linux-amd64
+go-ver/cloud-sync-zeabur.zip
+go-ver/cloud-sync/web/node_modules/
+go-ver/cloud-sync/web/dist/
+go-ver/cloud-sync/web/.env.local
+go-ver/cloud-sync/*.db
+go-ver/.claude/
