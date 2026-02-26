@@ -1,0 +1,7 @@
+cloud-sync/web/node_modules/
+cloud-sync/web/dist/
+cloud-sync/web/.env.local
+cloud-sync/*.db
+cloud-sync-zeabur.zip
+deepseek2api-linux-amd64
+.claude/
