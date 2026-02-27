@@ -18,9 +18,13 @@ func NewRouter(cfg config.Config, h *handlers.SyncHandler) *gin.Engine {
 		AllowMethods: []string{"GET", "POST", "OPTIONS"},
 		AllowHeaders: []string{"Authorization", "Content-Type", "X-User-ID"},
 	}))
-	r.Use(middleware.Auth(cfg))
+
+	r.GET("/healthz", func(c *gin.Context) {
+		c.JSON(200, gin.H{"status": "ok"})
+	})
 
 	v1 := r.Group("/api/cloud-sync/v1")
+	v1.Use(middleware.Auth(cfg))
 	{
 		v1.POST("/items", h.UpsertItem)
 		v1.GET("/items", h.ListItems)
@@ -31,9 +35,5 @@ func NewRouter(cfg config.Config, h *handlers.SyncHandler) *gin.Engine {
 		v1.POST("/handshake", h.Handshake)
 		v1.POST("/conflict/resolve", h.ResolveConflict)
 	}
-
-	r.GET("/healthz", func(c *gin.Context) {
-		c.JSON(200, gin.H{"status": "ok"})
-	})
 	return r
 }
